@@ -1,0 +1,67 @@
+<div class="container">
+	<div class="row">
+		<form ng-submit="$ctrl.searchArtist()">
+			<div class="col s3">
+				<input type="text" ng-model="$ctrl.query" placeholder="Busca artista">
+			</div>
+			<div class="col s3">
+				<button class="waves-effect waves-light btn red" type="submit">Buscar</button>
+			</div>
+		</form>
+	</div>
+	<div class="row" ng-show="$ctrl.results.length > 0">
+		<div class="chip artist" ng-repeat="r in $ctrl.results">
+			<div ng-click="$ctrl.getAlbums(r)">
+				<img ng-if="r.images.length" ng-src="{{r.images[0].url}}">
+				<img ng-if="!r.images.length" class="responsive-img" src="app/img/no-image-found.gif" alt="">
+			    {{ r.name }}
+			</div>
+		</div>
+	</div>
+	<div class="row" ng-show="$ctrl.albums.length > 0">
+		<!-- PAra albumes sera mejor -->
+		 <div class="col m3" ng-repeat="a in $ctrl.albums track by $index">
+			<div class="card">
+				<div class="card-image">
+					<img ng-if="a.images.length" class="responsive-img" ng-src="{{a.images[0].url}}" alt="">
+					<img ng-if="!a.images.length" class="responsive-img" src="app/img/no-image-found.gif" alt="">
+					<span class="card-title">{{ a.name }}</span>
+				</div>
+				<div class="card-content">
+					<!-- <a class="waves-effect waves-light btn red" href="#modal{{$index}}" modal>Escuchar</a> -->
+					<a class="waves-effect waves-light btn red" ng-click="$ctrl.searchSong(a)">Escuchar</a>
+				</div>
+				<div class="card-action">
+					<div class="chip" ng-repeat="genero in c.genres">
+						
+					</div>
+				</div>
+			</div>
+			
+		</div>	
+	</div>
+	<section class="spotify-player" ng-if="$ctrl.playlist">
+	    <div class="search">
+	        <div class="player" >
+	            <div class="results">
+	                <a class="song" ng-click="$ctrl.play(song)" ng-repeat="song in $ctrl.playlist">
+	                	<i class="material-icons">play_arrow</i>
+	                    <span class="title">{{song.name}}</span>
+	                    <span>{{$ctrl.milliseconds(song.duration_ms)}}</span>
+	                    
+	                </a>
+	            </div>
+	            <div class="song-detail">
+	                <div class="header">
+	                    <img ng-src="{{$ctrl.albumSelected.images[0].url}}" alt="">
+	                    <span class="title">{{$ctrl.artist.name}}</span>
+	                    <span>Album: {{$ctrl.albumSelected.name}}</span>
+	                    <span> {{$ctrl.playlist.length}} Tracks</span>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	
+	
+</div>

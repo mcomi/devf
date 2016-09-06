@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:8887/ -->
+<html lang="en" ng-app="myMovies" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link href="./Movies Collection_files/icon" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="./Movies Collection_files/materialize.min.css">
+
+
+	<title>Movies Collection</title>
+<script type="text/javascript" src="chrome-extension://bfbmjmiodbnnpllbbbfblcplfjjepjdn/js/injected.js"></script><script type="text/javascript" src="chrome-extension://aadgmnobpdmgmigaicncghmmoeflnamj/ng-inspector.js"></script><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style><script>var tvt = tvt || {}; tvt.captureVariables = function (a){for(var b=new Date,c={},d=Object.keys(a||{}),e=0,f;f=d[e];e++)if(a.hasOwnProperty(f)&&
+"undefined"!=typeof a[f])try{var g=[];c[f]=JSON.stringify(a[f],function(a,b){try{if("function"!==typeof b){if("object"===typeof b&&null!==b){if(b instanceof HTMLElement||b instanceof Node||-1!=g.indexOf(b))return;g.push(b)}return b}}catch(c){}})}catch(l){}a=document.createEvent("CustomEvent");a.initCustomEvent("TvtRetrievedVariablesEvent",!0,!0,{variables:c,date:b});window.dispatchEvent(a)};window.setTimeout(function() {tvt.captureVariables({'dataLayer': window['dataLayer']})}, 2000);</script></head>
+<body ng-controller="movieCtrl as movie" class="ng-scope">
+
+<div class="container">
+		<input ng-model="search" class="ng-valid ng-dirty ng-valid-parse ng-empty ng-touched">
+
+	<!-- <div class="row">
+		<div class="col md6">
+			<card></card>		
+		</div>
+		<div class="col md6">
+			<card></card>		
+		</div>
+	</div> -->
+</div>
+<div class="row">
+	<!-- ngRepeat: m in movie.collection | filter:search --><div class="col m2 ng-scope" ng-repeat="m in movie.collection | filter:search">
+		<div class="card">
+			<div class="card-image">
+				<img ng-src="./img/padrino.jpg" alt="" src="./Movies Collection_files/padrino.jpg">
+				<span class="card-title ng-binding">The Godfather</span>
+			</div>
+			<div class="card-content">
+				<p class="ng-binding">1972, Sci Fi</p>
+			</div>
+			<div class="card-action">
+				<h5>Cast</h5>
+				<!-- ngRepeat: p in m.cast --><ul ng-repeat="p in m.cast" class="ng-scope">
+					<li class="ng-binding">Marlon Brando</li>
+				</ul><!-- end ngRepeat: p in m.cast --><ul ng-repeat="p in m.cast" class="ng-scope">
+					<li class="ng-binding">Al Pacino</li>
+				</ul><!-- end ngRepeat: p in m.cast --><ul ng-repeat="p in m.cast" class="ng-scope">
+					<li class="ng-binding">James Caan</li>
+				</ul><!-- end ngRepeat: p in m.cast -->
+			</div>
+		</div>
+	</div><!-- end ngRepeat: m in movie.collection | filter:search --><div class="col m2 ng-scope" ng-repeat="m in movie.collection | filter:search">
+		<div class="card">
+			<div class="card-image">
+				<img ng-src="./img/robot.jpg" alt="" src="./Movies Collection_files/robot.jpg">
+				<span class="card-title ng-binding">Mr. Robot</span>
+			</div>
+			<div class="card-content">
+				<p class="ng-binding">2015, Sci Fi</p>
+			</div>
+			<div class="card-action">
+				<h5>Cast</h5>
+				<!-- ngRepeat: p in m.cast --><ul ng-repeat="p in m.cast" class="ng-scope">
+					<li class="ng-binding">Rami Malek</li>
+				</ul><!-- end ngRepeat: p in m.cast --><ul ng-repeat="p in m.cast" class="ng-scope">
+					<li class="ng-binding">Christian Slater</li>
+				</ul><!-- end ngRepeat: p in m.cast --><ul ng-repeat="p in m.cast" class="ng-scope">
+					<li class="ng-binding">Portia Doubleday</li>
+				</ul><!-- end ngRepeat: p in m.cast -->
+			</div>
+		</div>
+	</div><!-- end ngRepeat: m in movie.collection | filter:search --><div class="col m2 ng-scope" ng-repeat="m in movie.collection | filter:search">
+		<div class="card">
+			<div class="card-image">
+				<img ng-src="./img/matrix.jpg" alt="" src="./Movies Collection_files/matrix.jpg">
+				<span class="card-title ng-binding">Matrix</span>
+			</div>
+			<div class="card-content">
+				<p class="ng-binding">1999, Sci Fi</p>
+			</div>
+			<div class="card-action">
+				<h5>Cast</h5>
+				<!-- ngRepeat: p in m.cast --><ul ng-repeat="p in m.cast" class="ng-scope">
+					<li class="ng-binding">Keanu Reeves</li>
+				</ul><!-- end ngRepeat: p in m.cast --><ul ng-repeat="p in m.cast" class="ng-scope">
+					<li class="ng-binding">Laurence Fishburne</li>
+				</ul><!-- end ngRepeat: p in m.cast --><ul ng-repeat="p in m.cast" class="ng-scope">
+					<li class="ng-binding">Carrie-Anne Moss</li>
+				</ul><!-- end ngRepeat: p in m.cast -->
+			</div>
+		</div>
+	</div><!-- end ngRepeat: m in movie.collection | filter:search --><div class="col m2 ng-scope" ng-repeat="m in movie.collection | filter:search">
+		<div class="card">
+			<div class="card-image">
+				<img ng-src="./img/pulpfiction.jpg" alt="" src="./Movies Collection_files/pulpfiction.jpg">
+				<span class="card-title ng-binding">Pulp Fiction</span>
+			</div>
+			<div class="card-content">
+				<p class="ng-binding">1994, Sci Fi</p>
+			</div>
+			<div class="card-action">
+				<h5>Cast</h5>
+				<!-- ngRepeat: p in m.cast --><ul ng-repeat="p in m.cast" class="ng-scope">
+					<li class="ng-binding">John Travolta</li>
+				</ul><!-- end ngRepeat: p in m.cast --><ul ng-repeat="p in m.cast" class="ng-scope">
+					<li class="ng-binding">Samuel L. Jackson</li>
+				</ul><!-- end ngRepeat: p in m.cast --><ul ng-repeat="p in m.cast" class="ng-scope">
+					<li class="ng-binding">Uma Thurman</li>
+				</ul><!-- end ngRepeat: p in m.cast -->
+			</div>
+		</div>
+	</div><!-- end ngRepeat: m in movie.collection | filter:search --><div class="col m2 ng-scope" ng-repeat="m in movie.collection | filter:search">
+		<div class="card">
+			<div class="card-image">
+				<img ng-src="./img/winter_soldier.jpg" alt="" src="./Movies Collection_files/winter_soldier.jpg">
+				<span class="card-title ng-binding">Captain America: The Winter Soldier</span>
+			</div>
+			<div class="card-content">
+				<p class="ng-binding">2014, Sci Fi</p>
+			</div>
+			<div class="card-action">
+				<h5>Cast</h5>
+				<!-- ngRepeat: p in m.cast --><ul ng-repeat="p in m.cast" class="ng-scope">
+					<li class="ng-binding">Chris Evans</li>
+				</ul><!-- end ngRepeat: p in m.cast --><ul ng-repeat="p in m.cast" class="ng-scope">
+					<li class="ng-binding">Scarlett Johansson</li>
+				</ul><!-- end ngRepeat: p in m.cast --><ul ng-repeat="p in m.cast" class="ng-scope">
+					<li class="ng-binding">Samuel L. Jackson</li>
+				</ul><!-- end ngRepeat: p in m.cast -->
+			</div>
+		</div>
+	</div><!-- end ngRepeat: m in movie.collection | filter:search --><div class="col m2 ng-scope" ng-repeat="m in movie.collection | filter:search">
+		<div class="card">
+			<div class="card-image">
+				<img ng-src="./img/exmachina.jpg" alt="" src="./Movies Collection_files/exmachina.jpg">
+				<span class="card-title ng-binding">Ex Machina</span>
+			</div>
+			<div class="card-content">
+				<p class="ng-binding">2015, Sci Fi</p>
+			</div>
+			<div class="card-action">
+				<h5>Cast</h5>
+				<!-- ngRepeat: p in m.cast --><ul ng-repeat="p in m.cast" class="ng-scope">
+					<li class="ng-binding">Alicia Vikander</li>
+				</ul><!-- end ngRepeat: p in m.cast --><ul ng-repeat="p in m.cast" class="ng-scope">
+					<li class="ng-binding">Domhnall Gleeson</li>
+				</ul><!-- end ngRepeat: p in m.cast --><ul ng-repeat="p in m.cast" class="ng-scope">
+					<li class="ng-binding">Oscar Isaac</li>
+				</ul><!-- end ngRepeat: p in m.cast -->
+			</div>
+		</div>
+	</div><!-- end ngRepeat: m in movie.collection | filter:search -->
+</div>
+
+<script src="./Movies Collection_files/angular.min.js"></script>
+<script type="text/javascript" src="./Movies Collection_files/jquery-2.1.1.min.js"></script>
+<script src="./Movies Collection_files/materialize.min.js"></script>
+<script src="./Movies Collection_files/app.js"></script>
+
+<div class="hiddendiv common"></div></body></html>

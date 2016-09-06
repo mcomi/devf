@@ -1,0 +1,97 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Trebuchet MS", Helvetica;
+}
+.card-image {
+  height: 300px;
+}
+.chip {
+  display: inline-block;
+  height: 128px;
+  font-size: 2rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 128px;
+  padding: 0 20px;
+  border-radius: 80px;
+  background-color: #e4e4e4;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+.chip:hover {
+  cursor: pointer;
+}
+.chip img {
+  float: left;
+  margin: 0 8px 0 -18px;
+  height: 128px;
+  width: 128px;
+  border-radius: 50%;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Trebuchet MS", Helvetica;
+}
+* .spotify-player {
+  background: #000000;
+  width: 600px;
+  margin: 10px;
+  padding: 4px;
+  border-radius: 10px;
+}
+* .spotify-player .player .results {
+  font-size: 1.2rem;
+  width: 50%;
+  float: left;
+  color: #a3a3a3;
+  height: auto;
+  overflow: auto;
+}
+* .spotify-player .player .results .song {
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #666;
+}
+* .spotify-player .player .results .song i {
+  font-size: 4rem;
+  float: left;
+}
+* .spotify-player .player .results .song span {
+  display: block;
+}
+* .spotify-player .player .results .song span.title {
+  font-size: 18px;
+  color: #FFFFFF;
+}
+* .spotify-player .player .results .song:last-child {
+  border: none;
+}
+* .spotify-player .player .song-detail {
+  float: left;
+  padding: 2%;
+  width: 46%;
+  font-size: 15px;
+  color: white;
+}
+* .spotify-player .player .song-detail .header img {
+  width: 50%;
+  margin-right: 10px;
+  float: left;
+}
+* .spotify-player .player .song-detail .header span {
+  color: #999;
+  font-size: 16px;
+  display: block;
+}
+* .spotify-player .player .song-detail .header span.title {
+  color: #FFF;
+  font-size: 20px;
+}
+* .spotify-player .player:after {
+  clear: both;
+  content: " ";
+  display: block;
+}

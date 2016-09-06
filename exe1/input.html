@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<head>
+	<title>Exe1</title>
+</head>
+<body>
+<input id="c">
+<p id="p"></p>
+<script type="text/javascript">
+	var input = document.getElementById('c');
+	var p = document.getElementById('p');
+	input.addEventListener("click", function(){
+		p.value = input.value;
+	});
+</script>
+</body>
+</html>

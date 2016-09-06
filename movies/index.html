@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myMovies">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+<head>
+	<title>Movies Collection</title>
+</head>
+<body ng-controller="movieCtrl as movie">
+
+<div class="container">
+		<input ng-model="search.name">
+
+	<!-- <div class="row">
+		<div class="col md6">
+			<card></card>		
+		</div>
+		<div class="col md6">
+			<card></card>		
+		</div>
+	</div> -->
+</div>
+<div class="row">
+	<div class="col m2" ng-repeat="m in movie.collection | filter:search | orderBy: 'name'">
+		<div class="card">
+			<div class="card-image">
+				<img ng-src="{{m.img}}" alt="">
+				<span class="card-title">{{ m.name }}</span>
+			</div>
+			<div class="card-content">
+				<p>{{ m.year }}, {{ m.category }}</p>
+			</div>
+			<div class="card-action">
+				<h5>Cast</h5>
+				<ul ng-repeat="p in m.cast">
+					<li>{{ p }}</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

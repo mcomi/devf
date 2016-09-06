@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myCart">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+<head>
+	<title>Cart</title>
+</head>
+<body ng-controller="cartCtrl as cart">
+
+<div class="container">
+		<input ng-model="search.name">
+
+	<!-- <div class="row">
+		<div class="col md6">
+			<card></card>		
+		</div>
+		<div class="col md6">
+			<card></card>		
+		</div>
+	</div> -->
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col m3" ng-repeat="c in cart.collection | filter:search | orderBy: 'id'">
+			<div class="card">
+				<div class="card-image">
+					<img ng-src="{{c.img}}" alt="">
+					<span class="card-title">{{ c.name }}</span>
+				</div>
+				<div class="card-content">
+					<h4>{{ c.price | currency }}</h4>
+				</div>
+				<div class="card-action">
+					<p>{{ c.description }}</p>
+					<button class="btn-large waves-effect waves-light red"><i class="material-icons">shopping_cart</i> Add to cart</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

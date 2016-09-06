@@ -1,0 +1,29 @@
+<div class="container">
+	<div class="row">
+		<div class="col s6">
+			<div class="input-field">
+				<select ng-model="$ctrl.apiName">
+					<option value="films">Filmes</option>
+					<option value="people">Personajes</option>
+					<option value="planets">Planetas</option>
+					<option value="species">Especies</option>
+					<option value="starships">Naves</option>
+					<option value="vehicles">Vehículos</option>
+				</select>				
+			</div>
+		</div>
+		<div class="col s3 m3">
+			<button class="waves-effect waves-light btn red" ng-click="$ctrl.getApi()">Cargar</button>
+		</div>
+		
+		
+	</div>
+	<div class="row">
+		{{ $ctrl.apiData }}
+	</div>
+</div>
+<script>
+	$(document).ready(function() {
+    $('select').material_select();
+  });
+</script>
