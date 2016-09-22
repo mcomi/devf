@@ -1,0 +1,27 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<dom-module id="my-nuevavista">
+  <!-- Defines the element's style and local DOM -->
+  <template>
+    <style>
+      :host {
+        display: block;
+        padding: 16px;
+      }
+    </style>
+    <h1>Esta es mi nueva vista</h1>
+    <paper-card heading="Card Title" image="../images/polymer.png" alt="polymer logo">
+  <div class="card-content">Some content</div>
+  <div class="card-actions">
+    <paper-button>Some action</paper-button>
+  </div>
+</paper-card>
+  </template>
+  <!-- Creates the element's prototype and registers it -->
+  <script>
+    Polymer({
+      is: 'my-nuevavista'
+    });
+  </script>
+</dom-module>
